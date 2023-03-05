@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Nav";
+import Navbar from "./components/Header";
 import Jumbotron from "./components/Jumbo";
 import Card from "./components/Card";
 
