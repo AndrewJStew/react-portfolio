@@ -1,14 +1,15 @@
 import React from "react";
-import Navbar from "./components/Header";
-import Jumbotron from "./components/Jumbo";
-import Card from "./components/Card";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from "./components/Header/Header";
+import Home from "./components/Pages/Home";
+import Projects from "./components/Pages/Projects";
+import Contact from "./components/Pages/Contact";
 
 function App() {
     return (
         <div className="container">
-            <Navbar />
-            <Jumbotron />
-            <Card />;
+            <Header />
+            <Home />
         </div>
     );
 }
