@@ -7,10 +7,18 @@ import Contact from "./components/Pages/Contact";
 
 function App() {
     return (
-        <div className="container">
-            <Header />
-            <Home />
-        </div>
+        <Router>
+            <div>
+                <Header />
+                {/* wrap route elements in a Routes component*/}
+                <Routes>
+                    {/* Home component defined in default route*/}
+                    <Route path="/" element={<Home />} />
+                    <Route path="projects" element={<Projects />} />
+                    <Route path="contact Me" element={<Contact />} />
+                </Routes>
+            </div>
+        </Router>
     );
 }
 

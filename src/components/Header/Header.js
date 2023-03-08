@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Navlink } from "react-router-dom";
 
 function Header() {
   return (
@@ -19,18 +20,24 @@ function Header() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
+            <Navlink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? 'nav-link active' : 'nav-link'
+              }
+              >
+                Home
+              </Navlink>
+          </li>
+          <li className="nav-item">
             <a className="nav-link" href="#">
-              Home
+              Projects
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">
-            Projects
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-            Contact
+              Contact
             </a>
           </li>
           <li className="nav-item dropdown">
